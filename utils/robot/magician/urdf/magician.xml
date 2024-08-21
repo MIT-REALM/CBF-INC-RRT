@@ -1,0 +1,212 @@
+<robot name="magician">
+
+    <!-- Defining the colors used in this robot -->
+    <material name="Black">
+        <color rgba="0 0 0 1"/>
+    </material>
+
+    <material name="White">
+        <color rgba="1 1 1 1"/>
+    </material>
+
+    <material name="Grey">
+        <color rgba="0.9 0.9 0.9 1"/>
+    </material>
+
+    <!--  -->
+    <link name="base_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://magician/meshes/base_link.STL"/>
+            </geometry>
+            <material name="White"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://magician/meshes/base_link.STL"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="joint_1" type ="revolute">
+        <origin xyz="0 0 0.024" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="link_1"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="150.0" lower="-3.14159265" upper="3.14159265" velocity="3.15"/>
+    </joint>
+
+    <link name="link_1">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://magician/meshes/link_1.dae"/>
+            </geometry>
+            <!--material name="White"/-->
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://magician/meshes/link_1.STL"/>
+            </geometry>
+        </collision>
+    </link>
+
+    
+    <joint name="joint_2" type="revolute">
+        <origin xyz="-0.01175 0 0.114" rpy="1.570796325 0 -1.570796325"/>
+        <parent link="link_1"/>
+        <child link="link_2"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="150.0" lower="0" upper="1.570796325" velocity="3.15"/>
+    </joint>
+
+    <link name="link_2">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://magician/meshes/link_2.dae"/>
+            </geometry>
+            <!--material name="Black"/-->
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://magician/meshes/link_2.STL"/>
+            </geometry>
+        </collision>
+    </link>
+    
+    <!--
+    <joint name="joint_3" type ="revolute">
+        <origin xyz="0.00475 0.00001 0.114" rpy="1.570796325 0 1.570796325"/>
+        <parent link="link_1"/>
+        <child link="link_3"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="150.0" lower="-3.14159265" upper="3.14159265" velocity="3.15"/>
+    </joint>
+    -->
+
+    <!--
+    <link name="link_3">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://magician/meshes/link_3.STL"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://magician/meshes/link_3.STL"/>
+            </geometry>
+        </collision>
+    </link>
+    -->
+    
+    <!--
+    <joint name="joint_4" type ="revolute">
+        <origin xyz="0.0013 0.042980 0.00275" rpy="0 -1.570796325 0"/>
+        <parent link="link_3"/>
+        <child link="link_4"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="150.0" lower="-3.14159265" upper="3.14159265" velocity="3.15"/>
+    </joint>
+    -->
+
+    <!--
+    <link name="link_4">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://magician/meshes/link_4.STL"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://magician/meshes/link_4.STL"/>
+            </geometry>
+        </collision>
+    </link>
+    -->
+
+    <joint name="joint_5" type ="revolute">
+        <origin xyz="0.02699 0.13228 -0.01175" rpy="0 3.14159265 0"/>
+        <parent link="link_2"/>
+        <child link="link_5"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="150.0" lower="0" upper="1.570796325" velocity="3.15"/>
+    </joint>
+
+    <link name="link_5">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://magician/meshes/link_5.dae"/>
+            </geometry>
+            <!-- material name="White"/-->
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://magician/meshes/link_5.dae"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="joint_6" type ="revolute">
+        <origin xyz="0.07431 -0.12684 0.0" rpy="0 3.14159265 0"/>
+        <parent link="link_5"/>
+        <child link="link_6"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="150.0" lower="-3.14159265" upper="3.14159265" velocity="3.15"/>
+
+    </joint>
+
+    <link name="link_6">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://magician/meshes/link_6.STL"/>
+            </geometry>
+            <material name="Grey"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://magician/meshes/link_6.STL"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!--dummy joint-->
+    <joint name="joint_7" type ="revolute">
+        <origin xyz="0 0 0" rpy="0 3.14159265 0"/>
+        <parent link="link_6"/>
+        <child link="link_7"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="150.0" lower="-3.14159265" upper="3.14159265" velocity="3.15"/>
+        
+    </joint>
+
+    <link name="link_7">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://magician/meshes/link_7.STL"/>
+            </geometry>
+            <material name="Black"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://magician/meshes/link_7.STL"/>
+            </geometry>
+        </collision>
+    </link>
+    
+
+</robot>  
