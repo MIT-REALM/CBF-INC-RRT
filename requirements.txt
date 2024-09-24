@@ -35,7 +35,7 @@ gurobipy==9.1.2
 idna==3.4
 importlib-metadata==4.12.0
 iniconfig==1.1.1
-ipython==8.5.0
+ipython==8.10.0
 jedi==0.18.1
 kiwisolver==1.4.4
 MarkupSafe==2.1.1
