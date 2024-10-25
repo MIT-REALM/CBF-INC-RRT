@@ -113,6 +113,6 @@ u-msgpack-python==2.7.1
 urllib3==1.26.12
 wandb==0.15.2
 wcwidth==0.2.5
-Werkzeug==2.2.2
+Werkzeug==3.0.6
 yarl==1.8.1
 zipp==3.8.1
