@@ -110,7 +110,7 @@ tqdm==4.64.1
 traitlets==5.4.0
 typing_extensions==4.3.0
 u-msgpack-python==2.7.1
-urllib3==1.26.12
+urllib3==1.26.19
 wandb==0.15.2
 wcwidth==0.2.5
 Werkzeug==2.2.2
