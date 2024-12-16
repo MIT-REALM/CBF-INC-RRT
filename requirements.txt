@@ -115,4 +115,4 @@ wandb==0.15.2
 wcwidth==0.2.5
 Werkzeug==2.2.2
 yarl==1.8.1
-zipp==3.8.1
+zipp==3.19.1
